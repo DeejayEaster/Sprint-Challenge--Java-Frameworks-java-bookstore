@@ -1,5 +1,5 @@
 package com.lambdaschool.bookstore.config;
-import com.lambdaschool.bookstore.StartHereApplication;
+import com.lambdaschool.bookstore.BookStoreApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 @Configuration
 public class DataSourceConfig
 {
-    private static final Logger logger = LoggerFactory.getLogger(StartHereApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(BookStoreApplication.class);
     private static boolean stop = false;
 
     @Autowired

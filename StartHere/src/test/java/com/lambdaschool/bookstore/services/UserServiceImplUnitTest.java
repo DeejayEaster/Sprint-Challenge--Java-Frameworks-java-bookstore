@@ -1,6 +1,6 @@
 package com.lambdaschool.bookstore.services;
 
-import com.lambdaschool.bookstore.StartHereApplication;
+import com.lambdaschool.bookstore.BookStoreApplication;
 import com.lambdaschool.bookstore.exceptions.ResourceFoundException;
 import com.lambdaschool.bookstore.exceptions.ResourceNotFoundException;
 import com.lambdaschool.bookstore.models.Role;
@@ -30,7 +30,7 @@ import static junit.framework.TestCase.assertEquals;
  */
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = StartHereApplication.class)
+@SpringBootTest(classes = BookStoreApplication.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class UserServiceImplUnitTest
 {

@@ -7,16 +7,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableWebMvc
-// @EnableJpaAuditing
+@EnableJpaAuditing
 @SpringBootApplication
-public class StartHereApplication
+public class BookStoreApplication
 {
-    private static final Logger logger = LoggerFactory.getLogger(com.lambdaschool.bookstore.StartHereApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(BookStoreApplication.class);
     private static boolean stop = false;
 
     @Autowired
@@ -38,7 +38,7 @@ public class StartHereApplication
 
         if (!stop)
         {
-            ApplicationContext ctx = SpringApplication.run(com.lambdaschool.bookstore.StartHereApplication.class, args);
+            ApplicationContext ctx = SpringApplication.run(BookStoreApplication.class, args);
 
             DispatcherServlet dispatcherServlet = (DispatcherServlet) ctx.getBean("dispatcherServlet");
             dispatcherServlet.setThrowExceptionIfNoHandlerFound(true);

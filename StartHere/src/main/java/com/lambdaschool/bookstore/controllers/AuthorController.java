@@ -20,7 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/authors")
-public class AuthorController<AuthorService> {
+public class AuthorController {
     private static final Logger logger = LoggerFactory.getLogger(AuthorController.class);
 
     @Autowired
